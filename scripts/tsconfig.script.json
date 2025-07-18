@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // Keep target modern
+    "module": "CommonJS", // Compile to CommonJS for Node execution
+    "outDir": "./dist", // Output compiled JS to a dist subfolder relative to this tsconfig
+    // "rootDir": "../", // Remove rootDir, let tsc infer
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true, // Skip library checks to avoid type conflicts
+    "allowJs": true, // Allow importing JS files
+    "checkJs": false, // Don't type-check JS files
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node" // Use standard Node resolution
+  },
+  "include": ["populateProjects.ts"], // Include script relative to this tsconfig
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and output dir
+}

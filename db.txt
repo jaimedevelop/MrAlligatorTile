@@ -1,0 +1,44 @@
+admin@test.com password
+
+Firestore Database:
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read access to projects
+    match /projects/{projectId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.admin == true;
+    }
+
+match /appointments/{appointmentId} {
+  allow read: if true; // Anyone can read to check availability
+  allow write: if request.auth != null && request.auth.token.admin == true;
+  allow create: if true; // Anyone can create appointments
+}
+
+    // Allow read access to settings for everyone
+    match /settings/{settingId} {
+       allow read: if true;
+       allow write: if request.auth != null && request.auth.token.admin == true;
+    }
+
+    // Allow read access to pages for everyone
+    match /pages/{pageId} {
+       allow read: if true;
+       allow write: if request.auth != null && request.auth.token.admin == true;
+    }
+  }
+}
+
+Firebase Storage:
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow public read access to all files (so customers can see project images)
+    // Only allow writes for admin users
+    match /{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.admin == true;
+    }
+  }
+}
