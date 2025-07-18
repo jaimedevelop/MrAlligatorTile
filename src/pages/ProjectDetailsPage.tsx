@@ -60,7 +60,7 @@ export default function ProjectDetailsPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-500"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-500"></div>
       </div>
     );
   }
@@ -75,7 +75,7 @@ export default function ProjectDetailsPage() {
           </p>
           <Link
             to="/projects"
-            className="text-amber-600 hover:text-orange-600 flex items-center gap-2 justify-center"
+            className="text-green-600 hover:text-green-600 flex items-center gap-2 justify-center"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Projects
@@ -99,7 +99,7 @@ export default function ProjectDetailsPage() {
       <div className="container mx-auto px-4 py-6">
         <Link
           to="/projects"
-          className="text-amber-600 hover:text-orange-600 flex items-center gap-2"
+          className="text-green-600 hover:text-green-600 flex items-center gap-2"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Projects
@@ -121,7 +121,7 @@ export default function ProjectDetailsPage() {
         
         <div className="container mx-auto px-4 h-full flex items-end pb-12 relative z-10">
           <div className="text-white">
-            <div className="inline-block bg-amber-500 text-white px-4 py-1 rounded-full text-sm mb-4">
+            <div className="inline-block bg-green-500 text-white px-4 py-1 rounded-full text-sm mb-4">
               {project.category}
             </div>
             <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
@@ -165,12 +165,12 @@ export default function ProjectDetailsPage() {
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Project Highlights */}
-              <div className="bg-amber-50 p-6 rounded-lg">
+              <div className="bg-green-50 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-4">Project Highlights</h3>
                 <ul className="space-y-3">
                   {project.highlights.map((highlight, index) => (
                     <li key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckCircle className="w-5 h-5 text-amber-600" />
+                      <CheckCircle className="w-5 h-5 text-green-600" />
                       {highlight}
                     </li>
                   ))}
@@ -182,15 +182,15 @@ export default function ProjectDetailsPage() {
                 <h3 className="text-lg font-semibold mb-4">Project Details</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-2 text-gray-700">
-                    <Calendar className="w-5 h-5 text-amber-600" />
+                    <Calendar className="w-5 h-5 text-green-600" />
                     <span>Completed: {formatDisplayDate(project.completionDate)}</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-700">
-                    <Clock className="w-5 h-5 text-amber-600" />
+                    <Clock className="w-5 h-5 text-green-600" />
                     <span>Duration: {project.specifications.duration}</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-700">
-                    <MapPin className="w-5 h-5 text-amber-600" />
+                    <MapPin className="w-5 h-5 text-green-600" />
                     <span>Location: {project.specifications.location}</span>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default function ProjectDetailsPage() {
                     <ul className="space-y-2">
                       {project.specifications.services.map((service, index) => (
                         <li key={index} className="flex items-center gap-2 text-gray-700">
-                          <Tool className="w-4 h-4 text-amber-600" />
+                          <Tool className="w-4 h-4 text-green-600" />
                           {service}
                         </li>
                       ))}
@@ -216,7 +216,7 @@ export default function ProjectDetailsPage() {
                     <ul className="space-y-2">
                       {project.specifications.materials.map((material, index) => (
                         <li key={index} className="flex items-center gap-2 text-gray-700">
-                          <ChevronRight className="w-4 h-4 text-amber-600" />
+                          <ChevronRight className="w-4 h-4 text-green-600" />
                           {material}
                         </li>
                       ))}
@@ -226,7 +226,7 @@ export default function ProjectDetailsPage() {
               </div>
 
               {/* CTA */}
-              <div className="bg-amber-500 text-white p-6 rounded-lg">
+              <div className="bg-green-500 text-white p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-4">Need Similar Work?</h3>
                 <p className="mb-4">
                   We're ready to help with your plumbing project. Contact us for a free consultation.
@@ -234,13 +234,13 @@ export default function ProjectDetailsPage() {
                 <div className="space-y-2">
                   <Link
                     to="/contact"
-                    className="block text-center bg-white text-amber-600 px-6 py-2 rounded-lg font-semibold hover:bg-amber-50 transition-colors"
+                    className="block text-center bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                   >
                     Contact Us
                   </Link>
                   <Link
                     to="/schedule"
-                    className="block text-center border border-white px-6 py-2 rounded-lg font-semibold hover:bg-amber-600 transition-colors"
+                    className="block text-center border border-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors"
                   >
                     Schedule Service
                   </Link>

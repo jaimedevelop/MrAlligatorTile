@@ -41,7 +41,7 @@ export function Sidebar() {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400"
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-green-500 text-white rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
         aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
       >
         {isMobileMenuOpen ? (
@@ -64,7 +64,7 @@ export function Sidebar() {
       <aside
         className={`
           fixed lg:static inset-y-0 left-0 z-40
-          w-64 min-h-screen bg-amber-500 text-white
+          w-64 min-h-screen bg-green-500 text-white
           transform transition-transform duration-300 ease-in-out
           ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
           lg:translate-x-0 overflow-y-auto
@@ -84,7 +84,7 @@ export function Sidebar() {
             <NavLink
               to="/"
               className={({ isActive }) => 
-                `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
               }
               onClick={closeMobileMenu}
             >
@@ -95,7 +95,7 @@ export function Sidebar() {
             <NavLink
               to="/projects"
               className={({ isActive }) => 
-                `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
               }
               onClick={closeMobileMenu}
             >
@@ -106,7 +106,7 @@ export function Sidebar() {
             <NavLink
               to="/about"
               className={({ isActive }) => 
-                `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
               }
               onClick={closeMobileMenu}
             >
@@ -117,7 +117,7 @@ export function Sidebar() {
             <NavLink
               to="/contact"
               className={({ isActive }) => 
-                `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
               }
               onClick={closeMobileMenu}
             >
@@ -128,7 +128,7 @@ export function Sidebar() {
             <NavLink
               to="/schedule"
               className={({ isActive }) => 
-                `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
               }
               onClick={closeMobileMenu}
             >
@@ -138,11 +138,11 @@ export function Sidebar() {
 
             {isAuthenticated ? (
               <>
-                <div className="border-t border-amber-600 my-4"></div>
+                <div className="border-t border-green-600 my-4"></div>
                 <NavLink
                   to="/admin/pages"
                   className={({ isActive }) => 
-                    `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                    `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
                   }
                   onClick={closeMobileMenu}
                 >
@@ -152,7 +152,7 @@ export function Sidebar() {
                 <NavLink
                   to="/admin/projects"
                   className={({ isActive }) => 
-                    `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                    `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
                   }
                   onClick={closeMobileMenu}
                 >
@@ -162,7 +162,7 @@ export function Sidebar() {
                 <NavLink
                   to="/admin/appointments"
                   className={({ isActive }) => 
-                    `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                    `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
                   }
                   onClick={closeMobileMenu}
                 >
@@ -172,7 +172,7 @@ export function Sidebar() {
                 <NavLink
                   to="/admin/appointment-settings"
                   className={({ isActive }) => 
-                    `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                    `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
                   }
                   onClick={closeMobileMenu}
                 >
@@ -182,7 +182,7 @@ export function Sidebar() {
                 <NavLink
                   to="/admin/settings"
                   className={({ isActive }) => 
-                    `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''}`
+                    `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''}`
                   }
                   onClick={closeMobileMenu}
                 >
@@ -191,7 +191,7 @@ export function Sidebar() {
                 </NavLink>
                 <button
                   onClick={handleLogout}
-                  className="flex items-center gap-2 p-2 rounded hover:bg-amber-600 w-full text-left text-red-300 hover:text-red-200"
+                  className="flex items-center gap-2 p-2 rounded hover:bg-green-600 w-full text-left text-red-300 hover:text-red-200"
                 >
                   <LogOut className="w-5 h-5" />
                   <span>Logout</span>
@@ -201,7 +201,7 @@ export function Sidebar() {
               <NavLink
                 to="/admin-login"
                 className={({ isActive }) => 
-                  `flex items-center gap-2 p-2 rounded hover:bg-amber-600 ${isActive ? 'bg-orange-600' : ''} mt-4 text-amber-300 hover:text-amber-200`
+                  `flex items-center gap-2 p-2 rounded hover:bg-green-600 ${isActive ? 'bg-green-800' : ''} mt-4 text-green-300 hover:text-green-200`
                 }
                 onClick={closeMobileMenu}
               >

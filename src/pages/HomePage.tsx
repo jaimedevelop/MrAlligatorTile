@@ -5,9 +5,9 @@ import { EmergencyModal } from '../components/EmergencyModal';
 import { Phone, Clock, Shield, Award } from 'lucide-react';
 
 const seo = {
-  title: "Professional Remodeling and Plumbing Services",
-  description: "Expert Renovation and plumbing services in your area. Available 24/7 for emergency repairs, installations, and maintenance. Licensed and insured plumbers.",
-  keywords: ["plumbing services", "emergency plumber", "local plumber", "professional plumbing", "plumbing repair"]
+  title: "Professional Tiling Services",
+  description: "Expert tiling services in your area. Available 24/7 for emergency repairs, installations, and maintenance.",
+  keywords: ["tiling services", "emergency tile", "local tiling", "professional tiling", "tile repair"]
 };
 
 const EMERGENCY_NUMBER = "(813) 679-4905";
@@ -52,22 +52,22 @@ export default function HomePage() {
             backgroundSize: "cover"
           }}
         >
-          <div className="absolute inset-0 bg-amber-600/70" />
+          <div className="absolute inset-0 bg-green-600/70" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl text-white">
             <h1 className="text-5xl font-bold mb-6">
-              Expert reno and Plumbing Solutions by Mr. Alligator
+              Expert Tiling Solutions by Mr. Alligator
             </h1>
             <p className="text-xl mb-8">
-              Professional Reno and plumbing services for your home and business. 
-              Available 24/7 for emergencies.
+              Professional tiling services for your home and business. 
+              Available 24/7.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
                 to="/schedule" 
-                className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors"
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
               >
                 Schedule Service
               </Link>
@@ -91,8 +91,8 @@ export default function HomePage() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-amber-50">
-                <feature.icon className="w-12 h-12 mx-auto mb-4 text-amber-600" />
+              <div key={index} className="text-center p-6 rounded-lg bg-green-50">
+                <feature.icon className="w-12 h-12 mx-auto mb-4 text-green-600" />
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
@@ -102,7 +102,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-amber-500 text-white py-16">
+      <section className="bg-green-500 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Need a Repair or Plumber Right Now?
@@ -112,7 +112,7 @@ export default function HomePage() {
           </p>
           <button
             onClick={() => setIsEmergencyModalOpen(true)}
-            className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-flex items-center gap-2"
+            className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center gap-2"
           >
             <Phone className="w-5 h-5" />
             Call Now: {EMERGENCY_NUMBER}
@@ -157,7 +157,7 @@ export default function HomePage() {
                   <p className="text-gray-600">{service.description}</p>
                   <Link 
                     to="/schedule" 
-                    className="mt-4 text-amber-600 font-semibold hover:text-orange-600 inline-flex items-center"
+                    className="mt-4 text-green-600 font-semibold hover:text-green-600 inline-flex items-center"
                   >
                     Schedule Now →
                   </Link>

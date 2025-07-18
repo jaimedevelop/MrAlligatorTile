@@ -102,7 +102,7 @@ export default function ContactPage() {
             backgroundSize: "cover"
           }}
         >
-          <div className="absolute inset-0 bg-amber-600/80" />
+          <div className="absolute inset-0 bg-green-600/80" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10 text-white">
@@ -124,12 +124,12 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-amber-50 rounded-lg p-6 text-center">
-                <info.icon className="w-10 h-10 mx-auto mb-4 text-amber-600" />
+              <div key={index} className="bg-green-50 rounded-lg p-6 text-center">
+                <info.icon className="w-10 h-10 mx-auto mb-4 text-green-600" />
                 <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
                 {info.title === "Phone" ? (
                   <>
-                    <a href={`tel:${info.primary.replace(/[^\d]/g, '')}`} className="block text-gray-900 mb-1 hover:text-amber-600">
+                    <a href={`tel:${info.primary.replace(/[^\d]/g, '')}`} className="block text-gray-900 mb-1 hover:text-green-600">
                       {info.primary}
                     </a>
                     <a href={`tel:${EMERGENCY_NUMBER.replace(/[^\d]/g, '')}`} className="block text-red-600 hover:text-red-700">
@@ -138,10 +138,10 @@ export default function ContactPage() {
                   </>
                 ) : info.title === "Email" ? (
                   <>
-                    <a href={`mailto:${info.primary}`} className="block text-gray-900 mb-1 hover:text-amber-600">
+                    <a href={`mailto:${info.primary}`} className="block text-gray-900 mb-1 hover:text-green-600">
                       {info.primary}
                     </a>
-                    <a href={`mailto:${info.secondary}`} className="block text-gray-600 hover:text-amber-600">
+                    <a href={`mailto:${info.secondary}`} className="block text-gray-600 hover:text-green-600">
                       {info.secondary}
                     </a>
                   </>
@@ -163,7 +163,7 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center gap-3 mb-8">
-                <MessageSquare className="w-8 h-8 text-amber-600" />
+                <MessageSquare className="w-8 h-8 text-green-600" />
                 <h2 className="text-2xl font-bold">Send Us a Message</h2>
               </div>
 
@@ -176,7 +176,7 @@ export default function ContactPage() {
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
-                    className="mt-6 text-amber-600 font-semibold hover:text-orange-600"
+                    className="mt-6 text-green-600 font-semibold hover:text-green-600"
                   >
                     Send Another Message
                   </button>
@@ -213,7 +213,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                       />
                     </div>
                     <div>
@@ -227,7 +227,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -244,7 +244,7 @@ export default function ContactPage() {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                       />
                     </div>
                     <div>
@@ -257,7 +257,7 @@ export default function ContactPage() {
                         required
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                       >
                         <option value="">Select a service</option>
                         <option value="emergency">Emergency Repair</option>
@@ -280,14 +280,14 @@ export default function ContactPage() {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-amber-500 text-white py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors flex items-center justify-center gap-2"
+                    className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>Processing...</>

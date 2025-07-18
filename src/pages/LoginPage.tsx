@@ -88,10 +88,10 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-amber-50 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-green-50 px-4">
       <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-lg">
         <div className="text-center">
-          <Lock className="mx-auto h-12 w-12 text-amber-600" />
+          <Lock className="mx-auto h-12 w-12 text-green-600" />
           <h2 className="mt-6 text-3xl font-bold text-gray-900">Admin Login</h2>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -119,7 +119,7 @@ export default function LoginPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-amber-500 focus:border-amber-500 text-base"
+                  className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 text-base"
                   placeholder="Email address"
                 />
               </div>
@@ -139,7 +139,7 @@ export default function LoginPage() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-amber-500 focus:border-amber-500 text-base"
+                  className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 text-base"
                   placeholder="Password"
                 />
               </div>
@@ -149,7 +149,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={isLoggingIn}
-            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-amber-500 hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 disabled:opacity-50"
+            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50"
           >
             {isLoggingIn ? (
               <Loader2 className="w-5 h-5 animate-spin" />

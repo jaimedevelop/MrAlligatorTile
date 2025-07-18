@@ -73,7 +73,7 @@ export function AdminSetup() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-500 mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto"></div>
           <p className="mt-4">Checking admin status...</p>
         </div>
       </div>
@@ -82,14 +82,14 @@ export function AdminSetup() {
 
   if (!needsSetup) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-amber-50">
+      <div className="min-h-screen flex items-center justify-center bg-green-50">
         <div className="bg-white p-8 rounded-lg shadow-lg text-center max-w-md">
           <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Admin Already Configured</h2>
           <p className="text-gray-600 mb-6">Admin account is already set up.</p>
           <a 
             href="/admin" 
-            className="bg-amber-500 text-white px-6 py-2 rounded-lg hover:bg-amber-600 transition-colors"
+            className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors"
           >
             Go to Admin Login
           </a>
@@ -99,10 +99,10 @@ export function AdminSetup() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-amber-50">
+    <div className="min-h-screen flex items-center justify-center bg-green-50">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <div className="text-center mb-6">
-          <Shield className="w-16 h-16 text-amber-600 mx-auto mb-4" />
+          <Shield className="w-16 h-16 text-green-600 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900">Admin Setup</h2>
           <p className="text-gray-600">Create your admin account (one-time setup)</p>
         </div>
@@ -118,7 +118,7 @@ export function AdminSetup() {
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
             </div>
@@ -134,7 +134,7 @@ export function AdminSetup() {
                 type="password"
                 value={formData.password}
                 onChange={(e) => setFormData({...formData, password: e.target.value})}
-                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 placeholder="Minimum 8 characters"
                 required
               />
@@ -151,7 +151,7 @@ export function AdminSetup() {
                 type="password"
                 value={formData.confirmPassword}
                 onChange={(e) => setFormData({...formData, confirmPassword: e.target.value})}
-                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
             </div>
@@ -167,7 +167,7 @@ export function AdminSetup() {
 
           <button
             type="submit"
-            className="w-full bg-amber-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition-colors font-medium"
+            className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-colors font-medium"
           >
             Create Admin Account
           </button>

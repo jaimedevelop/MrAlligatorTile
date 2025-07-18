@@ -76,7 +76,7 @@ export default function ProjectsPage() {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-500"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-500"></div>
       </div>
     );
   }
@@ -86,7 +86,7 @@ export default function ProjectsPage() {
       <SEOHead seo={seo} />
 
       {/* Hero Section */}
-      <section className="bg-amber-500 text-white py-20">
+      <section className="bg-green-500 text-white py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
             Our Featured Projects
@@ -108,8 +108,8 @@ export default function ProjectsPage() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full transition-colors ${
                   selectedCategory === category
-                    ? 'bg-amber-500 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-amber-100'
+                    ? 'bg-green-500 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-green-100'
                 }`}
               >
                 {category}
@@ -132,7 +132,7 @@ export default function ProjectsPage() {
                       alt={project.title}
                       className="w-full h-64 object-cover"
                     />
-                    <div className="absolute top-4 right-4 bg-amber-500 text-white px-4 py-1 rounded-full">
+                    <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-1 rounded-full">
                       {project.category}
                     </div>
                   </div>
@@ -143,7 +143,7 @@ export default function ProjectsPage() {
                     <div className="space-y-2 mb-4">
                       {project.highlights.map((highlight, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-gray-700">
-                          <Star className="w-4 h-4 text-amber-500" />
+                          <Star className="w-4 h-4 text-green-500" />
                           <span>{highlight}</span>
                         </div>
                       ))}
@@ -156,7 +156,7 @@ export default function ProjectsPage() {
                       </div>
                       <Link 
                         to={`/projects/${project.id}`}
-                        className="flex items-center gap-2 text-amber-600 font-semibold hover:text-orange-600"
+                        className="flex items-center gap-2 text-green-600 font-semibold hover:text-green-600"
                       >
                         <span>View Details</span>
                         <Tool className="w-4 h-4" />
@@ -177,14 +177,14 @@ export default function ProjectsPage() {
             <h2 className="text-2xl font-bold">Projects Overview</h2>
             <button
               onClick={refreshProjects}
-              className="px-4 py-2 bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors"
+              className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
             >
               Refresh
             </button>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-white shadow-lg rounded-lg">
-              <thead className="bg-amber-50">
+              <thead className="bg-green-50">
                 <tr>
                   <th 
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
@@ -231,7 +231,7 @@ export default function ProjectsPage() {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {sortedProjects.map((project) => (
-                  <tr key={project.id} className="hover:bg-amber-50">
+                  <tr key={project.id} className="hover:bg-green-50">
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {formatDisplayDate(project.completionDate)}
                     </td>
@@ -256,7 +256,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-amber-500 text-white py-16">
+      <section className="bg-green-500 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Start Your Project?
@@ -267,7 +267,7 @@ export default function ProjectsPage() {
           </p>
           <Link 
             to="/contact"
-            className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-block"
+            className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-block"
           >
             Get a Free Quote
           </Link>
